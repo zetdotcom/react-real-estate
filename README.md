@@ -1,3 +1,3 @@
-#Real Estate website using REACT.JS
+# Real Estate website using REACT.JS
 
-##Project initialized with create-react-app
+## Project initialized with create-react-app
