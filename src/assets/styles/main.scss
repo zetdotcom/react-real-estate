@@ -4,11 +4,12 @@
 @import "_reset.scss";
 
 
-body {
+*, html, body {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 
 }
 
 
 @import "_listings.scss";
-@import "_sidebar.scss";
+@import "_content-area.scss";

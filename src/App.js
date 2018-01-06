@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Header from './assets/js/Header';
-import Sidebar from './assets/js/Sidebar';
+import Filter from './assets/js/Filter';
+import Listings from './assets/js/Listings';
 
 import './assets/styles/main.css';
 
@@ -9,7 +11,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Sidebar />
+        <section id="content-area">
+          <Filter />
+          <Listings />
+        </section>
       </div>
     );
   }

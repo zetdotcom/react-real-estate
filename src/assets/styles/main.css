@@ -127,8 +127,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  font-family: 'Roboto', sans-serif; }
+*, html, body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
 
 header {
   background: #0C002B;
@@ -155,8 +156,45 @@ header {
         color: white;
         border-radius: 5px; }
 
-.Sidebar {
+#filter {
   background: #faf7f5;
-  width: 30%;
-  height: 100%;
-  padding-bottom: 100px; }
+  width: 30%; }
+  #filter .inside {
+    padding: 20px;
+    max-width: 280px; }
+  #filter h4 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px; }
+  #filter select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    color: #636363;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    background: transparent;
+    border-radius: 2px; }
+  #filter .filters .title {
+    font-weight: 500;
+    color: grey;
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 0.5rem; }
+  #filter .filters input[type="text"] {
+    width: 45%;
+    margin-right: 2.5%;
+    margin-bottom: 1.1rem;
+    border-radius: 4px; }
+  #filter .filters.extras label {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    color: #292929;
+    font-size: 0.8rem; }
+    #filter .filters.extras label input[type="checkbox"] {
+      float: right;
+      background: red; }
