@@ -39,22 +39,22 @@ class Filter extends Component {
 
                     <div className="filters extras">
                     <span className="title">Extras</span>
-                        <label for="extras">
+                        <label htmlFor="extras">
                             <span>Elevators</span>
                             <input name="extras" value="elevator" type="checkbox"/>
                         </label>
 
-                        <label for="extras">
+                        <label htmlFor="extras">
                             <span>Swiming Pool</span>
                             <input name="extras" value="swimming-pool" type="checkbox"/>
                         </label>
 
-                        <label for="extras">
+                        <label htmlFor="extras">
                             <span>Fireplace</span>
                             <input name="extras" value="fireplace" type="checkbox"/>
                         </label>
 
-                        <label for="extras">
+                        <label htmlFor="extras">
                             <span>Garage</span>
                             <input name="extras" value="garage" type="checkbox"/>
                         </label>

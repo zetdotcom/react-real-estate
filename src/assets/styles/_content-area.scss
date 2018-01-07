@@ -1,10 +1,13 @@
 #filter {
-    background: lightblue;
+    background:$grey;
     width: 30%;
+    max-width: 300px;
+    // display: inline-block;
+    float: left;
 
     .inside{
         padding: 20px;
-        max-width: 280px;
+        max-width: 300px;
 
         
 
@@ -67,4 +70,41 @@
             }
         }
     }
+}
+
+#listings {
+    width: 70%;
+    float: left;
+    // display: inline-block;
+    padding: 15px;
+     .search-and-sort {
+         display: flex;
+         justify-content: space-between;
+         
+     }
+    .search-area {
+        color: $lightgrey;
+        // flex-grow: 1;
+        width: 70%;
+
+        input[type="text"] {
+            width: 100%;
+            
+            background: transparent;
+            font-size: 2rem;
+            border: none;
+            border-bottom: 1px solid $lightgrey;
+            margin-bottom: 5px;
+            color: $darkgrey;
+            display: inline-flex;
+
+        }
+        .results {
+            font-size: 0.8rem;
+
+        }
+    }
+
+
+    
 }

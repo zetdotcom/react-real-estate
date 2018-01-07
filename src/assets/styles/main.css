@@ -158,10 +158,12 @@ header {
 
 #filter {
   background: #faf7f5;
-  width: 30%; }
+  width: 30%;
+  max-width: 300px;
+  float: left; }
   #filter .inside {
     padding: 20px;
-    max-width: 280px; }
+    max-width: 300px; }
   #filter h4 {
     margin-bottom: 25px;
     font-weight: 700;
@@ -198,3 +200,25 @@ header {
     #filter .filters.extras label input[type="checkbox"] {
       float: right;
       background: red; }
+
+#listings {
+  width: 70%;
+  float: left;
+  padding: 15px; }
+  #listings .search-and-sort {
+    display: flex;
+    justify-content: space-between; }
+  #listings .search-area {
+    color: #b6b3b4;
+    width: 70%; }
+    #listings .search-area input[type="text"] {
+      width: 100%;
+      background: transparent;
+      font-size: 2rem;
+      border: none;
+      border-bottom: 1px solid #b6b3b4;
+      margin-bottom: 5px;
+      color: #ADA8AA;
+      display: inline-flex; }
+    #listings .search-area .results {
+      font-size: 0.8rem; }
