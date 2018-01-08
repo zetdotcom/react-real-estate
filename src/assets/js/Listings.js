@@ -16,8 +16,8 @@ class Listings extends Component {
 
           <section className="sortby-area">    
               <div className="view">
-                <i className="fa fa-th-list" aria-hidden="true"></i>
-                <i className="fa fa-th" aria-hidden="true"></i>
+              <i className="fa fa-th-list" aria-hidden="true"></i>
+              <i className="fa fa-th" aria-hidden="true"></i>
               </div>
               <select name="sortby" className="sortby">
                 <option value="price-asc">Highest Price</option>
