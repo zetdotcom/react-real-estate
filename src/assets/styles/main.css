@@ -156,6 +156,11 @@ header {
         color: white;
         border-radius: 5px; }
 
+#content-area {
+  width: 100%;
+  overflow: auto;
+  background: black; }
+
 #filter {
   background: #faf7f5;
   width: 30%;
@@ -204,7 +209,8 @@ header {
 #listings {
   width: 70%;
   float: left;
-  padding: 15px; }
+  padding: 15px;
+  background: #FFFEFF; }
   #listings .search-and-sort {
     display: flex;
     justify-content: space-between;
@@ -215,7 +221,7 @@ header {
     #listings .search-area input[type="text"] {
       width: 100%;
       background: transparent;
-      font-size: 2rem;
+      font-size: 1.7 rem;
       border: none;
       border-bottom: 1px solid #b6b3b4;
       margin-bottom: 5px;
@@ -230,3 +236,51 @@ header {
     padding: 5px 0; }
     #listings .sortby-area .fa {
       padding: 5px 10px; }
+  #listings .listings-results {
+    margin-bottom: 60px; }
+    #listings .listings-results .listing {
+      background: #fff;
+      width: 33.33%;
+      box-shadow: 0px 5px 15px -2px #c5c5c5;
+      border-radius: 5px; }
+    #listings .listings-results .listing-image {
+      background: url("https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=300&q=80") no-repeat center center;
+      background-size: cover;
+      min-height: 205px;
+      border-radius: 5px 5px 0 0;
+      display: flex;
+      flex-direction: column; }
+    #listings .listings-results .details {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      min-height: 205px;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: auto;
+      align-content: center;
+      color: #FFFEFF;
+      background: linear-gradient(to left, rgba(83, 83, 211, 0.877), rgba(143, 62, 197, 0.849));
+      background-size: cover;
+      border-radius: 5px 5px 0 0; }
+      #listings .listings-results .details .user {
+        display: flex; }
+      #listings .listings-results .details .user-img {
+        border-radius: 50%;
+        background: url("https://i1.rgstatic.net/ii/profile.image/494202137964544-1494838379378_Q64/Prachi_Ingle.jpg") no-repeat center center;
+        border: 1px solid #FFFEFF;
+        min-height: 50px;
+        min-width: 50px;
+        position: relative; }
+      #listings .listings-results .details .user-details {
+        padding: 10px;
+        display: flex;
+        flex-direction: column; }
+        #listings .listings-results .details .user-details .user-name {
+          padding-bottom: 3px; }
+      #listings .listings-results .details .listing-details {
+        display: flex;
+        justify-content: space-around; }
+    #listings .listings-results .details-hide {
+      display: none; }
