@@ -31,12 +31,12 @@ class Listings extends Component {
             <div className="listing-image">
 
               <div className="details">
-                <div className="details-hide">
+                
                   <div className="user">
                     <div className="user-img"></div>
                     <div className="user-details">
                       <span className="user-name">Nina Smith</span>
-                      <span className="post-date">Posted on 05/01/2018</span>
+                      <span className="post-date">05/01/2018</span>
                     </div>
                   </div>
                   <div className="listing-details">
@@ -51,17 +51,20 @@ class Listings extends Component {
                     </div>
 
                   </div>
-                </div>
-                <span className="address">Glasgow, West End</span>
+                
+                
               </div>
-
+              <span className="address">Glasgow, West End</span>
             </div>
             <div className="bottom-info">
               <span>£600/month</span>
               <span>
-                <i className="fa fa-map-marker" aria-hidden="true"></i>Glasgow</span>
+                <i className="fa fa-map-marker" aria-hidden="true"></i>Glasgow
+              </span>
             </div>
           </div>
+
+          
         </section>
 
         <section className="pagination"></section>
