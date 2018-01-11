@@ -27,63 +27,173 @@ class Listings extends Component {
         </div>
 
         <section className="listings-results">
-          <div className="listing">
-            <div className="listing-image">
+         
+            <div className="listing">
+              <div className="listing-image">
 
-              <div className="details">
-                
-                  <div className="user">
-                    <div className="user-img"></div>
-                    <div className="user-details">
-                      <span className="user-name">Nina Smith</span>
-                      <span className="post-date">05/01/2018</span>
+                <div className="details">
+                  
+                    <div className="user">
+                      <div className="user-img"></div>
+                      <div className="user-details">
+                        <span className="user-name">Nina Smith</span>
+                        <span className="post-date">05/01/2018</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="listing-details">
-                    <div className="floor-space">
-                      <i className="fa fa-square-o" aria-hidden="true"></i>
-                      <span>200 m&sup2;</span>
-                    </div>
+                    <div className="listing-details">
+                      <div className="floor-space">
+                        <i className="fa fa-square-o" aria-hidden="true"></i>
+                        <span>200 m&sup2;</span>
+                      </div>
 
-                    <div className="bedrooms">
-                      <i className="fa fa-bed" aria-hidden="true"></i>
-                      <span>3 bedrooms</span>
-                    </div>
+                      <div className="bedrooms">
+                        <i className="fa fa-bed" aria-hidden="true"></i>
+                        <span>3 bedrooms</span>
+                      </div>
 
-                  </div>
-                
-                
+                    </div>
+                  
+                  
+                </div>
+                <span className="address">Glasgow, West End</span>
               </div>
-              <span className="address">Glasgow, West End</span>
+              <div className="bottom-info">
+                <span>£600/month</span>
+                <span>
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Glasgow
+                </span>
+              </div>
             </div>
-            <div className="bottom-info">
-              <span>£600/month</span>
-              <span>
-                <i className="fa fa-map-marker" aria-hidden="true"></i>Glasgow
-              </span>
-            </div>
-          </div>
+          
 
+          
+            <div className="listing">
+              <div className="listing-image">
+
+                <div className="details">
+                  
+                    <div className="user">
+                      <div className="user-img"></div>
+                      <div className="user-details">
+                        <span className="user-name">Nina Smith</span>
+                        <span className="post-date">05/01/2018</span>
+                      </div>
+                    </div>
+                    <div className="listing-details">
+                      <div className="floor-space">
+                        <i className="fa fa-square-o" aria-hidden="true"></i>
+                        <span>200 m&sup2;</span>
+                      </div>
+
+                      <div className="bedrooms">
+                        <i className="fa fa-bed" aria-hidden="true"></i>
+                        <span>3 bedrooms</span>
+                      </div>
+
+                    </div>
+                  
+                  
+                </div>
+                <span className="address">Glasgow, West End</span>
+              </div>
+              <div className="bottom-info">
+                <span>£600/month</span>
+                <span>
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Glasgow
+                </span>
+              </div>
+            </div>
+         
+
+          
+            <div className="listing">
+              <div className="listing-image">
+
+                <div className="details">
+                  
+                    <div className="user">
+                      <div className="user-img"></div>
+                      <div className="user-details">
+                        <span className="user-name">Nina Smith</span>
+                        <span className="post-date">05/01/2018</span>
+                      </div>
+                    </div>
+                    <div className="listing-details">
+                      <div className="floor-space">
+                        <i className="fa fa-square-o" aria-hidden="true"></i>
+                        <span>200 m&sup2;</span>
+                      </div>
+
+                      <div className="bedrooms">
+                        <i className="fa fa-bed" aria-hidden="true"></i>
+                        <span>3 bedrooms</span>
+                      </div>
+
+                    </div>
+                  
+                  
+                </div>
+                <span className="address">Glasgow, West End</span>
+              </div>
+              <div className="bottom-info">
+                <span>£600/month</span>
+                <span>
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Glasgow
+                </span>
+              </div>
+            </div>
+
+            <div className="listing">
+              <div className="listing-image">
+
+                <div className="details">
+                  
+                    <div className="user">
+                      <div className="user-img"></div>
+                      <div className="user-details">
+                        <span className="user-name">Nina Smith</span>
+                        <span className="post-date">05/01/2018</span>
+                      </div>
+                    </div>
+                    <div className="listing-details">
+                      <div className="floor-space">
+                        <i className="fa fa-square-o" aria-hidden="true"></i>
+                        <span>200 m&sup2;</span>
+                      </div>
+
+                      <div className="bedrooms">
+                        <i className="fa fa-bed" aria-hidden="true"></i>
+                        <span>3 bedrooms</span>
+                      </div>
+
+                    </div>
+                  
+                  
+                </div>
+                <span className="address">Glasgow, West End</span>
+              </div>
+              <div className="bottom-info">
+                <span>£600/month</span>
+                <span>
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Glasgow
+                </span>
+              </div>
+            </div>
+          
           
         </section>
 
-        <section className="pagination"></section>
+        <section className="pagination">
 
-        <ul className="pagination-nums">
-          <li>Prev
-          </li>
-          <li>1
-          </li>
-          <li>2
-          </li>
-          <li>3
-          </li>
-          <li>4
-          </li>
-          <li>Next
-          </li>
-
-        </ul>
+          <ul className="pages">
+            <li>Prev</li>
+            <li className="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>Next</li>
+          </ul>
+        </section>
       </section>
 
     );
