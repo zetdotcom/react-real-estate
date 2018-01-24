@@ -7,6 +7,15 @@ import Listings from './assets/js/Listings';
 import './assets/styles/main.css';
 
 class App extends Component {
+constructor() {
+  super() {
+    
+  }
+}
+
+
+
+
   render() {
     return (
       <div className="App">
