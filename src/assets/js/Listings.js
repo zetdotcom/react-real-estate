@@ -1,6 +1,53 @@
 import React, {Component} from 'react'
 
 class Listings extends Component {
+  constructor () {
+    super ()
+    this.state = {
+      name: "michal"
+    }
+   
+    this.loopListings = this.loopListings.bind(this)
+  }
+
+loopListings () {
+
+  const {listingsData} = this.props
+
+  return listingsData.map((listing, index) => {
+   return <div className='listing' key={index}>
+      <div className='listing-image' style={{background:`url("${listing.image}") no-repeat center center`}}>
+        <div className='details'>
+          <div className='user'>
+            <div className='user-img' />
+            <div className='user-details'>
+              <span className='user-name'>Nina Smith</span>
+              <span className='post-date'>05/01/2018</span>
+            </div>
+          </div>
+          <div className='listing-details'>
+            <div className='floor-space'>
+              <i className='fa fa-square-o' aria-hidden='true' />
+              <span>{listing.space} m&sup2;</span>
+            </div>
+            <div className='bedrooms'>
+              <i className='fa fa-bed' aria-hidden='true' />
+              <span>{listing.rooms} bedrooms</span>
+            </div>
+          </div>
+        </div>
+        <span className='address'>{listing.city}</span>
+      </div>
+      <div className='bottom-info'>
+        <span>£{listing.price}</span>
+        <span>
+          <i className='fa fa-map-marker' aria-hidden='true' />{listing.city}
+          </span>
+      </div>
+    </div>
+  })
+}
+
   render () {
     return (
 
@@ -28,150 +75,8 @@ class Listings extends Component {
 
         <section className='listings-results'>
 
-          <div className='listing'>
-            <div className='listing-image'>
-
-              <div className='details'>
-
-                <div className='user'>
-                  <div className='user-img' />
-                  <div className='user-details'>
-                    <span className='user-name'>Nina Smith</span>
-                    <span className='post-date'>05/01/2018</span>
-                  </div>
-                </div>
-                <div className='listing-details'>
-                  <div className='floor-space'>
-                    <i className='fa fa-square-o' aria-hidden='true' />
-                    <span>200 m&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true' />
-                    <span>3 bedrooms</span>
-                  </div>
-
-                </div>
-
-              </div>
-              <span className='address'>Glasgow, West End</span>
-            </div>
-            <div className='bottom-info'>
-              <span>£600/month</span>
-              <span>
-                <i className='fa fa-map-marker' aria-hidden='true' />Glasgow
-                </span>
-            </div>
-          </div>
-
-          <div className='listing'>
-            <div className='listing-image'>
-
-              <div className='details'>
-
-                <div className='user'>
-                  <div className='user-img' />
-                  <div className='user-details'>
-                    <span className='user-name'>Nina Smith</span>
-                    <span className='post-date'>05/01/2018</span>
-                  </div>
-                </div>
-                <div className='listing-details'>
-                  <div className='floor-space'>
-                    <i className='fa fa-square-o' aria-hidden='true' />
-                    <span>200 m&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true' />
-                    <span>3 bedrooms</span>
-                  </div>
-
-                </div>
-
-              </div>
-              <span className='address'>Glasgow, West End</span>
-            </div>
-            <div className='bottom-info'>
-              <span>£600/month</span>
-              <span>
-                <i className='fa fa-map-marker' aria-hidden='true' />Glasgow
-                </span>
-            </div>
-          </div>
-
-          <div className='listing'>
-            <div className='listing-image'>
-
-              <div className='details'>
-
-                <div className='user'>
-                  <div className='user-img' />
-                  <div className='user-details'>
-                    <span className='user-name'>Nina Smith</span>
-                    <span className='post-date'>05/01/2018</span>
-                  </div>
-                </div>
-                <div className='listing-details'>
-                  <div className='floor-space'>
-                    <i className='fa fa-square-o' aria-hidden='true' />
-                    <span>200 m&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true' />
-                    <span>3 bedrooms</span>
-                  </div>
-
-                </div>
-
-              </div>
-              <span className='address'>Glasgow, West End</span>
-            </div>
-            <div className='bottom-info'>
-              <span>£600/month</span>
-              <span>
-                <i className='fa fa-map-marker' aria-hidden='true' />Glasgow
-                </span>
-            </div>
-          </div>
-
-          <div className='listing'>
-            <div className='listing-image'>
-
-              <div className='details'>
-
-                <div className='user'>
-                  <div className='user-img' />
-                  <div className='user-details'>
-                    <span className='user-name'>Nina Smith</span>
-                    <span className='post-date'>05/01/2018</span>
-                  </div>
-                </div>
-                <div className='listing-details'>
-                  <div className='floor-space'>
-                    <i className='fa fa-square-o' aria-hidden='true' />
-                    <span>200 m&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true' />
-                    <span>3 bedrooms</span>
-                  </div>
-
-                </div>
-
-              </div>
-              <span className='address'>Glasgow, West End</span>
-            </div>
-            <div className='bottom-info'>
-              <span>£600/month</span>
-              <span>
-                <i className='fa fa-map-marker' aria-hidden='true' />Glasgow
-                </span>
-            </div>
-          </div>
-
+        {this.loopListings()}
+          
         </section>
 
         <section className='pagination'>
