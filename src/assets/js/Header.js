@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 class Header extends Component {
-  render () {
+  render() {
     return (
 
       <header>
@@ -15,7 +15,6 @@ class Header extends Component {
 
         </nav>
       </header>
-
 
     )
   }

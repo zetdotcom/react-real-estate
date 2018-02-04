@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import Header from './assets/js/Header';
 import Filter from './assets/js/Filter';
 import Listings from './assets/js/Listings';
@@ -10,32 +9,51 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      listingsData
+      listingsData,
+      min_price: 0,
+      max_price: 10000000,
+      min_floor_space: 0,
+      max_floor_space: 2000,
+      filteredData: listingsData
     }
     this.change = this
       .change
+      .bind(this);
+    this.filteredData = this
+      .filteredData
       .bind(this);
   }
 
   change(event) {
     let name = event.target.name;
-    let value = event.target.value;
+    let value = (event.target.type === 'checkbox')
+      ? event.target.checked
+      : event.target.value;
     this.setState({
       [name]: value
     }, () => {
-      console.log(this.state)
+      console.log(this.state);
+      this.filteredData();
     })
-    console.log(event.target.value);
+  }
+
+  filteredData() {
+    let newData = this
+      .state
+      .listingsData
+      .filter((item) => {
+        return item.price >= this.state.min_price && item.price <= this.state.max_price && item.space >= this.state.min_floor_space && item.space <= this.state.max_floor_space
+      })
+    this.setState({filteredData: newData})
   }
 
   render() {
-    console.log(this.state.listingsData)
     return (
       <div className="App">
         <Header/>
         <section id="content-area">
-          <Filter change={this.change}/>
-          <Listings listingsData={this.state.listingsData}/>
+          <Filter change={this.change} globalState={this.state}/>
+          <Listings listingsData={this.state.filteredData}/>
         </section>
       </div>
     );
