@@ -24,7 +24,7 @@ class Listings extends Component {
         <div
           className='listing-image'
           style={{
-          background: `url("${listing.image}") no-repeat center center`
+          background: `url("${listing.image}") center center / cover no-repeat`
         }}>
           <div className='details'>
             <div className='user'>
@@ -43,7 +43,7 @@ class Listings extends Component {
               <div className='bedrooms'>
                 <i className='fa fa-bed' aria-hidden='true'/>
                 <span>{listing.rooms}
-                  bedrooms</span>
+                  &nbsp; bedrooms</span>
               </div>
             </div>
           </div>
@@ -76,9 +76,9 @@ class Listings extends Component {
               <i className='fa fa-th-list' aria-hidden='true'/>
               <i className='fa fa-th' aria-hidden='true'/>
             </div>
-            <select name='sortby' className='sortby'>
-              <option value='price-asc'>Highest Price</option>
-              <option value='price-dsc'>Lowest Price</option>
+            <select name='sortby' className='sortby' onChange={this.props.change}>
+              <option value='price-dsc'>Price: Low to High</option>
+              <option value='price-asc'>Price: High to Low</option>
             </select>
 
           </section>
