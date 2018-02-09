@@ -1,9 +1,9 @@
 header {
 	background: $darkpurple;
 	color: white;
-	overflow: auto;
+	overflow: hidden;
 	padding: 20px 15px;
-
+	width: 100%;
 	.logo {
 		float: left;
 	}

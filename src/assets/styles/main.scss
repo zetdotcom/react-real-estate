@@ -3,13 +3,15 @@
 @import "_variables.scss";
 @import "_reset.scss";
 
-
-*, html, body {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-
+*,
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
 }
 
+.App {
+}
 
 @import "_listings.scss";
 @import "_content-area.scss";
