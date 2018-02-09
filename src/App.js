@@ -17,6 +17,9 @@ class App extends Component {
 			max_price: 10000000,
 			min_floor_space: 0,
 			max_floor_space: 2000,
+			ensuite: false,
+			fireplace: false,
+			garage: false,
 			filteredData: listingsData,
 			populateFormsData: '',
 			sortby: 'price-dsc',
@@ -98,6 +101,32 @@ class App extends Component {
 				if (n !== null) {
 					return true;
 				}
+			});
+		}
+
+		let extras = this.state.listingsData.map((item) => {
+			return item.extras;
+		});
+		let extrasN = [];
+		extrasN = extrasN.concat(...extras);
+		extrasN = new Set(extrasN);
+		extrasN = [ ...extrasN ];
+		console.log(extrasN);
+
+		let { ensuite, fireplace, garage } = this.state;
+		if (ensuite !== false) {
+			newData = newData.filter((item, index) => {
+				return item.extras.indexOf('ensuite') >= 0;
+			});
+		}
+		if (fireplace !== false) {
+			newData = newData.filter((item, index) => {
+				return item.extras.indexOf('fireplace') >= 0;
+			});
+		}
+		if (garage !== false) {
+			newData = newData.filter((item, index) => {
+				return item.extras.indexOf('garage') >= 0;
 			});
 		}
 
