@@ -9,7 +9,46 @@ class Listings extends Component {
 
     this.loopListings = this
       .loopListings
-      .bind(this)
+      .bind(this);
+    this.listingImageClass = this
+      .listingImageClass
+      .bind(this);
+    this.listingClass = this
+      .listingClass
+      .bind(this);
+    this.listingsResultsClass = this
+      .listingsResultsClass
+      .bind(this);
+  }
+
+  listingImageClass() {
+    let {view} = this.props.globalState;
+    return (view == 'grid')
+      ? 'listing-image-grid'
+      : 'listing-image-list'
+    console.log(view)
+  }
+
+  listingClass() {
+    let {view} = this.props.globalState;
+    return (view == 'grid')
+      ? 'listing-grid'
+      : 'listing-list'
+    console.log(view)
+  }
+
+  listingsResultsClass() {
+    let {view} = this.props.globalState;
+    let showGrid = {
+      flexFlow: 'row wrap'
+    }
+    let showList = {
+      flexFlow: 'column'
+    }
+    return (view == 'grid')
+      ? showGrid
+      : showList
+
   }
 
   loopListings() {
@@ -20,9 +59,9 @@ class Listings extends Component {
     }
 
     return listingsData.map((listing, index) => {
-      return <div className='listing' key={index}>
+      return <div className={this.listingClass()} key={index}>
         <div
-          className='listing-image'
+          className={this.listingImageClass()}
           style={{
           background: `url("${listing.image}") center center / cover no-repeat`
         }}>
@@ -60,6 +99,7 @@ class Listings extends Component {
   }
 
   render() {
+
     return (
 
       <section id='listings'>
@@ -73,8 +113,11 @@ class Listings extends Component {
 
           <section className='sortby-area'>
             <div className='view'>
-              <i className='fa fa-th-list' aria-hidden='true'/>
-              <i className='fa fa-th' aria-hidden='true'/>
+              <i
+                className='fa fa-th-list'
+                aria-hidden='true'
+                onClick={this.props.changeViewList}/>
+              <i className='fa fa-th' aria-hidden='true' onClick={this.props.changeViewGrid}/>
             </div>
             <select name='sortby' className='sortby' onChange={this.props.change}>
               <option value='price-dsc'>Price: Low to High</option>
@@ -84,7 +127,7 @@ class Listings extends Component {
           </section>
         </div>
 
-        <section className='listings-results'>
+        <section className='listings-results' style={this.listingsResultsClass()}>
 
           {this.loopListings()}
 

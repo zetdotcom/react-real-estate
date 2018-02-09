@@ -105,9 +105,27 @@
 		margin-bottom: 60px;
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 
-		.listing {
+		.listing-list {
+			background: #fff;
+			max-width: 80%;
+			margin: 10px 10%;
+			box-shadow: 0px 5px 15px -2px #c5c5c5;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: box-shadow 0.3s ease-in-out;
+			display: flex;
+
+			&:hover {
+				box-shadow: 2px 12px 15px -2px rgb(197, 197, 197);
+				.details {
+					opacity: 1;
+				}
+			}
+		}
+
+		.listing-grid {
 			background: #fff;
 			flex: 1 0 28%;
 			max-width: 320px;
@@ -125,7 +143,17 @@
 			}
 		}
 
-		.listing-image {
+		.listing-image-list {
+			min-height: 205px;
+			border-radius: 5px 5px 0 0;
+			width: 50%;
+			position: relative;
+			background-size: cover;
+
+			// color: $offwhite;
+		}
+
+		.listing-image-grid {
 			background-size: cover;
 			min-height: 205px;
 			border-radius: 5px 5px 0 0;
@@ -265,3 +293,21 @@
 		}
 	}
 }
+
+//------- listing image list view
+
+// min-height: 205px;
+// border-radius: 5px 5px 0 0;
+// width: 50%;
+// position: relative;
+
+//-------- listing list view
+
+// background: #fff;
+// max-width: 80%;
+// margin: 10px 10%;
+// box-shadow: 0px 5px 15px -2px #c5c5c5;
+// border-radius: 5px;
+// cursor: pointer;
+// transition: box-shadow 0.3s ease-in-out;
+// display: flex;

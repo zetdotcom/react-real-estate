@@ -31,6 +31,12 @@ class App extends Component {
     this.populateForms = this
       .populateForms
       .bind(this);
+    this.changeViewGrid = this
+      .changeViewGrid
+      .bind(this)
+    this.changeViewList = this
+      .changeViewList
+      .bind(this)
   }
 
   componentWillMount() {
@@ -42,7 +48,10 @@ class App extends Component {
         return a.price - b.price
       })
 
+    this.changeViewGrid();
+    this.changeViewList();
     this.setState({listingsData})
+
   }
 
   change(event) {
@@ -138,6 +147,16 @@ class App extends Component {
     })
   }
 
+  changeViewGrid() {
+    this.setState({view: 'grid'})
+    console.log(this.state.view)
+  }
+
+  changeViewList() {
+    this.setState({view: 'list'})
+    console.log(this.state.view)
+  }
+
   render() {
     return (
       <div className="App">
@@ -150,7 +169,9 @@ class App extends Component {
           <Listings
             listingsData={this.state.filteredData}
             change={this.change}
-            globalState={this.state}/>
+            globalState={this.state}
+            changeViewGrid={this.changeViewGrid}
+            changeViewList={this.changeViewList}/>
         </section>
       </div>
     );
