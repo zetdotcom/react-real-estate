@@ -98,7 +98,7 @@ class Listings extends Component {
 					<section className="search-area">
 						<input type="text" name="search" onChange={this.props.change} />
 
-						<div className="results">390 results found</div>
+						<div className="results">{this.props.globalState.filteredData.length} results found</div>
 					</section>
 
 					<section className="sortby-area">
