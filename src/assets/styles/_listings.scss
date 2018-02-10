@@ -1,15 +1,24 @@
-header {
+.header {
 	background: $darkpurple;
 	color: white;
 	overflow: hidden;
 	padding: 20px 15px;
 	width: 100%;
+	height: 53px;
 	.logo {
 		float: left;
+		img {
+			height: 53px;
+			// width: 100px;
+			top: 0;
+			left: 130px;
+			position: absolute;
+		}
 	}
 
-	nav {
+	.nav {
 		float: right;
+		// top: -25px;
 
 		a {
 			color: white;
@@ -31,5 +40,81 @@ header {
 				border-radius: 5px;
 			}
 		}
+		.menuBtn {
+			// display: inline-block;
+			cursor: pointer;
+			display: none;
+			height: 30px;
+			position: absolute;
+			// opacity: 0;
+
+			// top: 10px;
+			right: 10px;
+			top: 10px;
+			// position: relative;
+			// top: -35px;
+			// display: none;
+		}
+		.bar1,
+		.bar2,
+		.bar3 {
+			width: 35px;
+			height: 5px;
+			background-color: rgb(255, 255, 255);
+			margin: 6px 0;
+			transition: 0.4s;
+		}
+		.change .bar1 {
+			-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+			transform: rotate(-45deg) translate(-9px, 6px);
+		}
+		.change .bar2 {
+			opacity: 0;
+		}
+
+		.change .bar3 {
+			-webkit-transform: rotate(45deg) translate(-8px, -8px);
+			transform: rotate(45deg) translate(-8px, -8px);
+		}
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.nav {
+		#btn {
+			// opacity: 1;
+			display: block;
+			font-size: 2em;
+			margin-right: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	.nav {
+		height: auto;
+		background: $darkpurple;
+
+		.navMenu {
+			padding-top: 30px;
+
+			a {
+				display: flex;
+				flex-direction: column;
+				background: $darkpurple;
+				padding: 15px;
+				text-align: right;
+				font-size: 1em;
+			}
+			a:first-child,
+			a:last-child {
+				margin-top: 20px;
+			}
+		}
+	}
+	.header {
+		position: absolute;
+		// padding-bottom: 50px;
+		height: 53px;
+		z-index: 99;
+		// overflow: auto;
 	}
 }
