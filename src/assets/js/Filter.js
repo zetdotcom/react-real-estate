@@ -54,7 +54,7 @@ class Filter extends Component {
 
 	render() {
 		return (
-			<section id="filter">
+			<section id="filter" style={{ position: this.props.position }}>
 				<div className="inside">
 					<h4>Filter</h4>
 					<label htmlFor="city">City</label>

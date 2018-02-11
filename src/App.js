@@ -24,13 +24,15 @@ class App extends Component {
 			populateFormsData: '',
 			sortby: 'price-dsc',
 			view: 'grid',
-			search: ''
+			search: '',
+			filterOpen: false
 		};
 		this.change = this.change.bind(this);
 		this.filteredData = this.filteredData.bind(this);
 		this.populateForms = this.populateForms.bind(this);
 		this.changeViewGrid = this.changeViewGrid.bind(this);
 		this.changeViewList = this.changeViewList.bind(this);
+		this.toogleFilter = this.toogleFilter.bind(this);
 	}
 
 	componentWillMount() {
@@ -182,12 +184,27 @@ class App extends Component {
 		console.log(this.state.view);
 	}
 
+	toogleFilter() {
+		this.setState({
+			filterOpen: !this.state.filterOpen
+		});
+	}
+
 	render() {
+		const filterPosition = this.state.filterOpen ? 'absolute' : 'relative';
 		return (
 			<div className="App">
 				<Header />
+				<div className="filterBtn" onClick={this.toogleFilter}>
+					F<br />I<br />L<br />T<br />E<br />R
+				</div>
 				<section id="content-area">
-					<Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
+					<Filter
+						change={this.change}
+						globalState={this.state}
+						populateAction={this.populateForms}
+						position={filterPosition}
+					/>
 					<Listings
 						listingsData={this.state.filteredData}
 						change={this.change}

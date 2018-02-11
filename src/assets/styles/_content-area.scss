@@ -304,9 +304,47 @@
 	}
 }
 
+.filterBtn {
+	position: absolute;
+	display: none;
+}
+
 @media only screen and (max-width: 550px) {
 	#content-area {
+		height: 100vh;
 		padding-top: 53px;
+	}
+
+	#filter {
+		flex: 0;
+		// position: relative; //position absolute will be set when filter section opened. it appears on top of listings
+		left: 0;
+		width: 100%;
+		// padding-left: 20px;
+		z-index: 3;
+		// width: 0px;
+		max-width: unset;
+		transition: all 1s;
+		.inside {
+			padding-left: 40px;
+		}
+	}
+	.filterBtn {
+		opacity: 1;
+		cursor: pointer;
+		position: absolute;
+		display: inline-block;
+		// right: -20px;
+		left: 0;
+		top: 50%;
+		z-index: 5;
+		// text-orientation: mixed;
+		// background: $darkpurple;
+		border: 1px solid grey;
+		border-radius: 0 15px 15px 0;
+		padding: 14px 14px 14px 5px;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		// color: $grey;
 	}
 }
 
